@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Lista filmów</title>
+  </head>
+  <body>
+    <h1>Lista filmów</h1>
+    <table>
+      <tr>
+        <th>nazwa</th>
+        <th>opis</th>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+    <form>
+      <input type="text" placeholder="Podaj tytuł filmu" name="nazwa" [(ngModel)]="nazwa"/>
+      <input type="text" placeholder="Dodaj opis filmu" name="opis" [(ngModel)]="opis"/>
+      <button type="button" (click)="formularz.resetForm()">Resetuj</button>
+      <button type="submit">Dodaj</button>
+    </form>
+  </body>
+</html>
