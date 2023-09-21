@@ -6,7 +6,7 @@
     <h1>Lista filmów</h1>
     <table>
       <tr>
-        <th>nazwa</th>
+        <th>tytuł</th>
         <th>opis</th>
       </tr>
       <tr>
@@ -14,7 +14,7 @@
       </tr>
     </table>
     <form>
-      <input type="text" placeholder="Podaj tytuł filmu" name="nazwa" [(ngModel)]="nazwa"/>
+      <input type="text" placeholder="Podaj tytuł filmu" name="tytul" [(ngModel)]="tytul"/>
       <input type="text" placeholder="Dodaj opis filmu" name="opis" [(ngModel)]="opis"/>
       <button type="button" (click)="formularz.resetForm()">Resetuj</button>
       <button type="submit">Dodaj</button>
