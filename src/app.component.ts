@@ -7,9 +7,33 @@ import { Component } from '@angular/core';
 export class AppComponent {
   tytul: string = '';
   opis: string = '';
-  Tablica()
-  {
-const filmy = ["Gwiezdne wojny część I","Gwiezdne wojny część II","Gwiezdne wojny część III","Gwiezdne wojny część IV","Gwiezdne wojny część V","Gwiezdne wojny część VI","Gwiezdne wojny część VII","Gwiezdne wojny część VIII","Gwiezdne wojny część IX"];
-filmy.push(this.tytul);
+  Tablica() {
+    const filmy = [
+      'Gwiezdne wojny część I',
+      'Gwiezdne wojny część II',
+      'Gwiezdne wojny część III',
+      'Gwiezdne wojny część IV',
+      'Gwiezdne wojny część V',
+      'Gwiezdne wojny część VI',
+      'Gwiezdne wojny część VII',
+      'Gwiezdne wojny część VIII',
+      'Gwiezdne wojny część IX',
+    ];
+    filmy.push(this.tytul);
+    for (let film of this.tytul) {
+      document.write(
+        '<table>',
+        '<tr>',
+        '<th>tytuł</th>',
+        '<th>opis</th>',
+        '</tr>',
+        '<tr>',
+        '<td>',
+        document.write(film),
+        '</td>',
+        '</tr>',
+        '</table>'
+      );
+    }
   }
-};
+}
