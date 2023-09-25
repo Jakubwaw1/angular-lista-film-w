@@ -28,17 +28,22 @@ export class AppComponent {
       '<th>tytuł</th>',
       '<th>opis</th>',
       '</tr>');
-    for (let film of this.tytul; let op of this.opis) {
+    for (let film of this.tytul) {
       document.write(
         '<tr>',
         '<td>',
         document.write(film),
         '</td>',
-        '<td>',
-        document.write(op),
-        '</td>',
         '</tr>',
       );
+      for (let op of this.opis) {
+        document.write(
+          '<tr>',
+          '<td>',
+          document.write(op),
+          '</td>',
+          '</tr>',
+        );
     }
     document.write('</table>');
   }
