@@ -35,10 +35,14 @@ export class AppComponent {
       '<tr>'
     );
     for (let film of this.tytul) {
-      document.write('<td>', document.write(film), '</td>');
+      document.write('<td>');
+      document.write(film);
+      document.write('</td>');
     }
     for (let op of this.opis) {
-      document.write('<td>', document.write(op), '</td>');
+      document.write('<td>');
+      document.write(op);
+      document.write('</td>');
     }
     document.write('</tr>', '</table>');
   }
