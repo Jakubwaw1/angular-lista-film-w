@@ -5,10 +5,36 @@
   <body>
     <h1>Lista filmów</h1>
     <form>
-      <input type="text" placeholder="Podaj tytuł filmu" name="tytul" [(ngModel)]="tytul"/>
-      <input type="text" placeholder="Dodaj opis filmu" name="opis" [(ngModel)]="opis"/>
+      <input
+        type="text"
+        placeholder="Podaj tytuł filmu"
+        name="tytul"
+        [(ngModel)]="tytul"
+      />
+      <input
+        type="text"
+        placeholder="Dodaj opis filmu"
+        name="opis"
+        [(ngModel)]="opis"
+      />
       <button type="button" (click)="formularz.resetForm()">Resetuj</button>
       <button type="submit">Dodaj</button>
+    </form>
+    <form>
+      <input
+        type="number"
+        placeholder="Podaj numer filmu od którego usuwac"
+        name="x"
+        [(ngModel)]="x"
+      />
+      <input
+        type="number"
+        placeholder="Podaj ilosc filmów do usuniecia"
+        name="y"
+        [(ngModel)]="y"
+      />
+      <button type="button" (click)="formularz.resetForm()">Resetuj</button>
+      <button type="submit">Usuń</button>
     </form>
   </body>
 </html>

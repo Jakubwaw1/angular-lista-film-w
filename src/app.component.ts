@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   tytul: string = '';
   opis: string = '';
+  x: number = 0;
+  y: number = 0;
   Tablica() {
     const filmy = [
       'Gwiezdne wojny część I',
@@ -22,29 +24,22 @@ export class AppComponent {
     const Opis = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
     filmy.push(this.tytul);
     Opis.push(this.opis);
+    const Usunfilm = filmy.splice(this.x, this.y);
+    const Usunopis = filmy.splice(this.x, this.y);
     document.write(
       '<table>',
       '<tr>',
       '<th>tytuł</th>',
       '<th>opis</th>',
-      '</tr>');
+      '</tr>'
+    );
     for (let film of this.tytul) {
-      document.write(
-        '<tr>',
-        '<td>',
-        document.write(film),
-        '</td>',
-        '</tr>',
-      );
-      for (let op of this.opis) {
-        document.write(
-          '<tr>',
-          '<td>',
-          document.write(op),
-          '</td>',
-          '</tr>',
-        );
+      document.write('<tr>', '<td>', document.write(film), '</td>', '</tr>');
     }
-    document.write('</table>');
+      for (let op of this.opis) {
+        document.write('<tr>', '<td>', document.write(op), '</td>', '</tr>');
+      }
+      document.write('</table>');
+    }
   }
-}
+
