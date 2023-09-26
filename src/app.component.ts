@@ -27,6 +27,7 @@ export class AppComponent {
     const Usunfilm = filmy.splice(this.x, this.y);
     const Usunopis = filmy.splice(this.x, this.y);
     document.write(
+      '<h1>Lista filmów</h1>',
       '<table>',
       '<tr>',
       '<th>tytuł</th>',
