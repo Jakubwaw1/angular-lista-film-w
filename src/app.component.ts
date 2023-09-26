@@ -31,15 +31,15 @@ export class AppComponent {
       '<tr>',
       '<th>tytuł</th>',
       '<th>opis</th>',
-      '</tr>'
+      '</tr>',
+      '<tr>'
     );
     for (let film of this.tytul) {
-      document.write('<tr>', '<td>', document.write(film), '</td>', '</tr>');
+      document.write('<td>', document.write(film), '</td>');
     }
-      for (let op of this.opis) {
-        document.write('<tr>', '<td>', document.write(op), '</td>', '</tr>');
-      }
-      document.write('</table>');
+    for (let op of this.opis) {
+      document.write('<td>', document.write(op), '</td>');
     }
+    document.write('</tr>', '</table>');
   }
-
+}
